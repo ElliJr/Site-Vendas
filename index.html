@@ -3,28 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Supermercado Online</title>
+    <title>FOOD NOW</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="container">
         <!-- Barra Lateral -->
         <aside class="sidebar">
-            <h2>Categorias</h2>
-            <ul>
-                <li><a href="#">Hortifruti</a></li>
-                <li><a href="#">Carnes</a></li>
-                <li><a href="#">Laticínios</a></li>
-                <li><a href="#">Bebidas</a></li>
-                <li><a href="#">Limpeza</a></li>
-            </ul>
+            <div class="fixed">
+                <span class="open-btn" onclick="abrirMenu()">&#9776;</span>
+                <h2>Categorias</h2>
+                <ul>
+                    <li><a href="#">Hortifruti</a></li>
+                    <li><a href="#">Carnes</a></li>
+                    <li><a href="#">Laticínios</a></li>
+                    <li><a href="#">Bebidas</a></li>
+                    <li><a href="#">Limpeza</a></li>
+                </ul>
+            </div>
         </aside>
-
         <!-- Conteúdo Principal -->
         <main class="main-content">
             <header>
                 <div class="logo">
-                    <h1>Supermercado Online</h1>
+                    <h1>FOOD NOW</h1>
                 </div>
                 <div class="search-bar">
                     <input type="text" placeholder="Pesquisar produtos...">
@@ -33,7 +35,6 @@
 
             <!-- Carrossel de Destaques -->
             <section class="carousel-section">
-                <h2>Promoções</h2>
                 <div class="carousel-container">
                     <button class="prev-btn">❮</button>
                     <div class="carousel">
@@ -58,11 +59,6 @@
             </section>
         </main>
     </div>
-
-    <footer class="footer">
-        <p>&copy; 2024 Supermercado Online | Todos os direitos reservados.</p>
-    </footer>
-
     <script src="js/main.js"></script>
 </body>
 </html>

@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -13,6 +17,7 @@ body {
 
 .container {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
 }
 
@@ -21,7 +26,13 @@ body {
     background-color: #333;
     color: white;
     padding: 20px;
-    height: 100vh;
+    height: auto;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.fixed {
+    position: fixed;
 }
 
 .sidebar h2 {
@@ -51,6 +62,7 @@ body {
 .main-content {
     flex: 1;
     padding: 20px;
+    width: 100%;
 }
 
 header {
@@ -99,6 +111,7 @@ header .logo h1 {
     align-items: center;
     font-size: 2rem;
     height: 300px;
+    animation: fadeInButton 0.5s ease-in-out forwards;
 }
 
 .prev-btn, .next-btn {
@@ -112,6 +125,8 @@ header .logo h1 {
     font-size: 2rem;
     cursor: pointer;
     z-index: 10;
+    opacity: 0; /* Inicialmente invisível */
+    animation: fadeInButton 0.5s ease-in-out forwards;
 }
 
 .prev-btn {
@@ -122,10 +137,77 @@ header .logo h1 {
     right: 10px;
 }
 
+/* Efeito de fade-in para os botões */
+@keyframes fadeInButton {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Efeito de hover nos botões */
 .prev-btn:hover, .next-btn:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
+/* Responsividade: Ajustando o layout para telas menores */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        position: relative;
+        flex-shrink: 0;
+    }
+
+    .main-content {
+        width: 100%;
+    }
+
+    header .logo h1 {
+        font-size: 1.5rem;
+    }
+
+    .carousel-container {
+        width: 90%;
+        max-width: 500px;
+    }
+
+    .carousel-item {
+        font-size: 1.5rem;
+        height: 250px;
+    }
+
+    .search-bar input {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-item {
+        font-size: 1.2rem;
+        height: 220px;
+    }
+
+    .prev-btn, .next-btn {
+        font-size: 1.5rem;
+        padding: 8px;
+    }
+
+    .search-bar input {
+        width: 100%;
+    }
+
+    header .logo h1 {
+        font-size: 1.2rem;
+    }
+}
+
+/* Produtos */
 .products {
     margin-top: 40px;
 }
@@ -149,18 +231,41 @@ header .logo h1 {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     font-size: 1.5rem;
     color: #333;
+    animation: fadeInButton 0.5s ease-in-out forwards;
 }
 
 .product-item:hover {
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
-.footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
+
+.menu-lateral a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .menu-lateral a:hover {
+    color: #f1f1f1;
+  }
+  
+  .menu-lateral .close-btn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+  }
+  .open-btn {
+    visibility: visible;
+    font-size: 30px;
+    cursor: pointer;
+    top: 20px;
+    left: 600px;
+    color: #fff;    
     padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
+    border-radius: 5px;
+    z-index: 1;
+  }
