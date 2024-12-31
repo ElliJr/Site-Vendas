@@ -1,40 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Layout com Barra Lateral</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermercado Online</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="container">
-    <!-- Barra lateral -->
-    <aside class="sidebar">
-      <div class="logo">LOGO</div>
-      <nav class="menu">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">Sobre</a></li>
-          <li><a href="#contact">Contato</a></li>
-        </ul>
-      </nav>
-      <div class="dots">...</div>
-    </aside>
-    <!-- Conteúdo principal -->
-    <main class="content">
-      <section id="home">
-        <h1>Bem-vindo ao site</h1>
-        <p>Este é um exemplo de layout com uma barra lateral funcional.</p>
-      </section>
-      <section id="about">
-        <h2>Sobre</h2>
-        <p>Adicione informações sobre sua página aqui.</p>
-      </section>
-      <section id="contact">
-        <h2>Contato</h2>
-        <p>Adicione informações de contato aqui.</p>
-      </section>
-    </main>
-  </div>
+    <div class="container">
+        <!-- Barra Lateral -->
+        <aside class="sidebar">
+            <h2>Categorias</h2>
+            <ul>
+                <li><a href="#">Hortifruti</a></li>
+                <li><a href="#">Carnes</a></li>
+                <li><a href="#">Laticínios</a></li>
+                <li><a href="#">Bebidas</a></li>
+                <li><a href="#">Limpeza</a></li>
+            </ul>
+        </aside>
+
+        <!-- Conteúdo Principal -->
+        <main class="main-content">
+            <header>
+                <div class="logo">
+                    <h1>Supermercado Online</h1>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Pesquisar produtos...">
+                </div>
+            </header>
+
+            <!-- Carrossel de Destaques -->
+            <section class="carousel-section">
+                <h2>Promoções</h2>
+                <div class="carousel-container">
+                    <button class="prev-btn">❮</button>
+                    <div class="carousel">
+                        <div class="carousel-item">Promoção 1</div>
+                        <div class="carousel-item">Promoção 2</div>
+                        <div class="carousel-item">Promoção 3</div>
+                        <div class="carousel-item">Promoção 4</div>
+                    </div>
+                    <button class="next-btn">❯</button>
+                </div>
+            </section>
+
+            <!-- Produtos em Destaque -->
+            <section class="products">
+                <h2>Produtos em Destaque</h2>
+                <div class="product-list">
+                    <div class="product-item">Produto 1</div>
+                    <div class="product-item">Produto 2</div>
+                    <div class="product-item">Produto 3</div>
+                    <div class="product-item">Produto 4</div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Supermercado Online | Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
