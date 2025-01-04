@@ -14,22 +14,32 @@
                 <span class="open-btn" onclick="abrirMenu()">&#9776;</span>
                 <h2>Categorias</h2>
                 <ul>
-                    <li><a href="#">Hortifruti</a></li>
-                    <li><a href="#">Carnes</a></li>
-                    <li><a href="#">Laticínios</a></li>
-                    <li><a href="#">Bebidas</a></li>
-                    <li><a href="#">Limpeza</a></li>
+                    <li><a href="#hortifruti">Hortifruti</a></li>
+                    <li><a href="#carnes">Carnes</a></li>
+                    <li><a href="#laticinios">Laticínios</a></li>
+                    <li><a href="#bebidas">Bebidas</a></li>
+                    <li><a href="#limpeza">Limpeza</a></li>
                 </ul>
             </div>
+        </aside>
+        <aside class="menu">
+                <h2>Categorias</h2>
+                <ul>
+                    <li><a href="#hortifruti">Hortifruti</a></li>
+                    <li><a href="#carnes">Carnes</a></li>
+                    <li><a href="#laticinios">Laticínios</a></li>
+                    <li><a href="#bebidas">Bebidas</a></li>
+                    <li><a href="#limpeza">Limpeza</a></li>
+                </ul>
         </aside>
         <!-- Conteúdo Principal -->
         <main class="main-content">
             <header>
                 <div class="logo">
-                    <h1>FOOD NOW</h1>
+                    <h1 class="food-now">FOOD NOW</h1>
                 </div>
                 <div class="search-bar">
-                    <input type="text" placeholder="Pesquisar produtos...">
+                    <input type="text" id="searchInput" placeholder="Pesquisar categorias..." oninput="filtrarProdutos()">
                 </div>
             </header>
 
@@ -38,18 +48,58 @@
                 <div class="carousel-container">
                     <button class="prev-btn">❮</button>
                     <div class="carousel">
-                        <div class="carousel-item">Promoção 1</div>
-                        <div class="carousel-item">Promoção 2</div>
-                        <div class="carousel-item">Promoção 3</div>
-                        <div class="carousel-item">Promoção 4</div>
+                        <div class="carousel-item"><img src="comida-1.jpg" class="comida" alt="Arroz com ovo"></div>
+                        <div class="carousel-item"><img src="comida-1.jpg" class="comida" alt="Arroz com ovo"></div>
+                        <div class="carousel-item"><img src="comida-1.jpg" class="comida" alt="Arroz com ovo"></div>
+                        <div class="carousel-item"><img src="comida-1.jpg" class="comida" alt="Arroz com ovo"></div>
                     </div>
                     <button class="next-btn">❯</button>
                 </div>
             </section>
 
             <!-- Produtos em Destaque -->
-            <section class="products">
-                <h2>Produtos em Destaque</h2>
+            <section class="products" id="hortifruti">
+                <h2>Hortifruti</h2>
+                <div class="product-list">
+                    <div class="product-item">Produto 1</div>
+                    <div class="product-item">Produto 2</div>
+                    <div class="product-item">Produto 3</div>
+                    <div class="product-item">Produto 4</div>
+                </div>
+            </section>
+
+            <section class="products" id="carnes">
+                <h2>Carnes</h2>
+                <div class="product-list">
+                    <div class="product-item">Produto 1</div>
+                    <div class="product-item">Produto 2</div>
+                    <div class="product-item">Produto 3</div>
+                    <div class="product-item"></div>
+                </div>
+            </section>
+
+            <section class="products" id="laticinios">
+                <h2>Laticínios</h2>
+                <div class="product-list">
+                    <div class="product-item">Produto 1</div>
+                    <div class="product-item">Produto 2</div>
+                    <div class="product-item">Produto 3</div>
+                    <div class="product-item">Produto 4</div>
+                </div>
+            </section>
+
+            <section class="products" id="bebidas">
+                <h2>Bebidas</h2>
+                <div class="product-list">
+                    <div class="product-item">Produto 1</div>
+                    <div class="product-item">Produto 2</div>
+                    <div class="product-item">Produto 3</div>
+                    <div class="product-item">Produto 4</div>
+                </div>
+            </section>
+
+            <section class="products" id="limpeza">
+                <h2>Limpeza</h2>
                 <div class="product-list">
                     <div class="product-item">Produto 1</div>
                     <div class="product-item">Produto 2</div>

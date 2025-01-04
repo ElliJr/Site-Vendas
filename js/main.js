@@ -56,3 +56,46 @@ prevBtn.addEventListener('click', () => {
     function fecharMenu() {
         document.getElementById("menuLateral").style.width = "0";
       }
+
+
+      function filtrarProdutos() {
+        // Pega o valor do campo de pesquisa
+        let input = document.getElementById("searchInput").value.toLowerCase();
+    
+        // Pega todas as seções de produtos
+        let secaoProdutos = document.querySelectorAll(".products");
+    
+        // Percorre cada seção e filtra os produtos
+        secaoProdutos.forEach(function(secao) {
+            let nomeSecao = secao.querySelector("h2").innerText.toLowerCase(); // Pega o nome da seção
+            let produtos = secao.querySelectorAll(".product-item"); // Pega todos os produtos na seção
+            let exibeSecao = false; // Variável para controlar se a seção deve ser exibida
+    
+            // Verifica se a seção deve ser exibida
+            if (nomeSecao.includes(input)) {
+                secao.style.display = "block"; // Exibe a seção se o nome corresponder à pesquisa
+                exibeSecao = true; // Marca a seção como visível
+            } else {
+                secao.style.display = "none"; // Oculta a seção se o nome não corresponder à pesquisa
+            }
+    
+            // Filtra os produtos dentro da seção
+            produtos.forEach(function(produto) {
+                // Verifica se o nome ou a descrição do produto (incluindo a imagem) contém o termo de pesquisa
+                let nomeProduto = produto.querySelector("p") ? produto.querySelector("p").innerText.toLowerCase() : "";
+                let imagemProduto = produto.querySelector("img") ? produto.querySelector("img").alt.toLowerCase() : "";
+    
+                if (nomeProduto.includes(input) || imagemProduto.includes(input)) {
+                    produto.style.display = "block"; // Exibe o produto se corresponder à pesquisa
+                } else {
+                    produto.style.display = "none"; // Oculta o produto se não corresponder à pesquisa
+                }
+            });
+    
+            // Se nenhum produto for encontrado, oculta a seção
+            if (!exibeSecao) {
+                secao.style.display = "none";
+            }
+        });
+    }
+    
