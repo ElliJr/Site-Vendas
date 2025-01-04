@@ -142,7 +142,8 @@ header .logo {
 }
 
 .menu{
-    background-color: #d33232;
+    display: none;
+    background-color: #6847157a;
     width: 200px;
     margin: 13px;
     padding: 13px;
