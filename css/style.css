@@ -27,7 +27,7 @@ body {
 
 .sidebar {
     width: 250px;
-    background-color: #333;
+    background-color: #4d1a03a9;
     color: white;
     padding: 20px;
     height: auto;
@@ -35,8 +35,25 @@ body {
     position: relative;
 }
 
-.fixed {
+.fixed  {
     position: fixed;
+    align-items: center;
+    font-size: 18px;
+    margin: 10px 0;
+    padding: 10px;
+    background: rgb(95, 30, 30);
+    transition: background 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    border-radius: 20px;
+    z-index: 10;
+}
+li{
+    border-radius: 20px;
+    
+}
+.fixed li:hover{
+    background: rgba(221, 60, 60, 0.212);
+    transform: scale(1.05);
 }
 
 .sidebar h2 {
@@ -56,11 +73,12 @@ body {
     color: white;
     text-decoration: none;
     display: block;
+    padding: 5px;
+    border-radius: 4px;
 }
 
 .sidebar ul li a:hover {
     background-color: #555;
-    padding: 5px;
 }
 
 .main-content {
@@ -86,6 +104,13 @@ header .logo {
 }
 
 .search-bar input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.search input {
+    width: 140px;
     padding: 10px;
     font-size: 1rem;
     border: 1px solid #ccc;
@@ -142,16 +167,17 @@ header .logo {
 }
 
 .menu{
-    display: none;
+    display: none; 
     background-color: #6847157a;
-    width: 200px;
+    width: 80%;
+    max-width: 400px;
     margin: 13px;
     padding: 13px;
     border-radius: 10px;
-    padding-bottom: 33px;
     position: fixed;
     z-index: 12;
-    top: -140px;
+    left: 170px;
+    top: -198px;
     text-align: center;
     transition: 1s;
 }
@@ -197,6 +223,7 @@ a{
     }
     .menu{
         display: block;
+        width: 90%;
     }
     .sidebar {
         display: none;
@@ -223,9 +250,16 @@ a{
     .search-bar input {
         width: 80%;
     }
+    .search-bar{
+        display: none;
+    }
 }
 
-@media (max-width: 480px) {
+
+@media (max-width: 500px) {
+    .menu{
+        width: 50%;
+    }
     .carousel-item {
         font-size: 1.2rem;
         height: 220px;
@@ -257,7 +291,7 @@ a{
 }
 
 .product-item {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.8);
     width: 200px;
     height: 250px;
     margin: 10px;

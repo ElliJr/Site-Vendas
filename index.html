@@ -11,25 +11,29 @@
         <!-- Barra Lateral -->
         <aside class="sidebar">
             <div class="fixed">
-                <span class="open-btn" onclick="abrirMenu()">&#9776;</span>
                 <h2>Categorias</h2>
                 <ul>
-                    <li><a href="#hortifruti">Hortifruti</a></li>
-                    <li><a href="#carnes">Carnes</a></li>
-                    <li><a href="#laticinios">Laticínios</a></li>
-                    <li><a href="#bebidas">Bebidas</a></li>
-                    <li><a href="#limpeza">Limpeza</a></li>
+                    <li><a href="#hortifruti"><i class="icon">🍎</i> Hortifruti</a></li>
+                    <li><a href="#carnes"><i class="icon">🥩</i> Carnes</a></li>
+                    <li><a href="#laticinios"><i class="icon">🧀</i> Laticínios</a></li>
+                    <li><a href="#bebidas"><i class="icon">🥤</i> Bebidas</a></li>
+                    <li><a href="#limpeza"><i class="icon">🧽</i> Limpeza</a></li>                    
                 </ul>
             </div>
         </aside>
         <aside class="menu">
                 <h2>Categorias</h2>
                 <ul>
+                    <div class="search">
+                        <input type="text" id="searchInput" placeholder="Pesquisar categorias..." oninput="filtrarProdutos()">
+                    </div>
                     <li><a href="#hortifruti">Hortifruti</a></li>
                     <li><a href="#carnes">Carnes</a></li>
                     <li><a href="#laticinios">Laticínios</a></li>
                     <li><a href="#bebidas">Bebidas</a></li>
                     <li><a href="#limpeza">Limpeza</a></li>
+                    <br>
+                    <span><img src="css/6364352.png" width="30px" alt=""></span>
                 </ul>
         </aside>
         <!-- Conteúdo Principal -->
